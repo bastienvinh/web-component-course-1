@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Tooltip</title>
+  <script src="dist/tootip.js"></script>
+  <script src="dist/confirm-link.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      --color-primary: #a4e6fc;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <template id="tooltip-template">
+    <slot>Some default</slot><span> (?)</span>
+  </template>
+  <p>
+    <uc-tooltip class="important" text="Web Components is a set of standards.">
+      <span class="highlight">Web Components</span>
+    </uc-tooltip>are awesome.
+  </p>
+  <uc-tooltip text="Web Components big change."></uc-tooltip>
+  <a is="uc-confirm-link" href="https://www.google.com">Google</a>
+</body>
+</html>
